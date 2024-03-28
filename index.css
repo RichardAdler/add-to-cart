@@ -1,0 +1,93 @@
+/* Challenge: Make it so that the user cannot select the text */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 100%);
+    color: #432000;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+    background: 0;
+}
+
+img {
+    content: "";
+    inset: -8px;
+    padding: 10px;
+    border-radius: 25%; 
+    background: conic-gradient(
+            #ff53bb ,
+            #0000 30deg 120deg,
+            #00f8d3 150deg 180deg,
+            #0000 210deg 300deg,
+            #ff53bb 330deg
+        );
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: intersect
+}
+
+input {
+    color: #ffffff;
+    background: radial-gradient(circle, rgb(167, 208, 252) 0%, rgba(209, 209, 209, 0.644) 75%);
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin: 25px 0;
+    filter: drop-shadow(15px 10px 4px #4444dda6);
+}
+
+button {
+    color: #FDFDFD;
+    background: radial-gradient(circle, rgba(153,153,246,1) 50%, rgba(38,223,251,1) 100%);
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    filter: drop-shadow(15px 10px 4px #4444dd9a);
+}
+
+
+button:hover {
+    background: radial-gradient(circle,  rgba(61, 205, 228, 0.493)  0%, rgba(153,153,246,1) 100%);
+    cursor: pointer; 
+    font-weight: 900;   
+    filter: drop-shadow(15px 10px 4px #ff53bab7 );
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    font-size: 20px;
+    background-color: #FFFDF8;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+}
+
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
