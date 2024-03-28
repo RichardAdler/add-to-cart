@@ -18,7 +18,6 @@ html, body {
 }
 
 img {
-    content: "";
     inset: -8px;
     padding: 10px;
     border-radius: 25%; 
@@ -29,11 +28,6 @@ img {
             #0000 210deg 300deg,
             #ff53bb 330deg
         );
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: intersect
 }
 
 input {
